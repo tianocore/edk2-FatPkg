@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PackageSurfaceArea xmlns="http://www.TianoCore.org/2006/Edk2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SpdHeader>
+    <PackageName>FatPkg</PackageName>
+    <GuidValue>8EA68A2C-99CB-4332-85C6-DD5864EAA674</GuidValue>
+    <Version>1.0</Version>
+    <Abstract>Edk FAT Package</Abstract>
+    <Description>FAT 32 Driver</Description>
+    <Copyright>Copyright (c) 2006,  Intel Corporation.</Copyright>
+    <License>Redistribution and use in source and binary forms, with or without
+      modification, are permitted provided that the following conditions are
+      met:
+
+           Redistributions of source code must retain the above copyright
+           notice, this list of conditions and the following disclaimer.
+
+           Redistributions in binary form must reproduce the above copyright
+           notice, this list of conditions and the following disclaimer in 
+           the documentation and/or other materials provided with the 
+           distribution.
+
+           Neither the name of Intel nor the names of its contributors may
+           be used to endorse or promote products derived from this software
+           without specific prior written permission.
+
+      THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+      "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+      LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+      A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+      OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+      SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+      LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+      DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+      THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+      (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+      OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+      Additional terms: In addition to the forgoing, redistribution and use
+      of the code is conditioned upon the FAT 32 File System Driver and all
+      derivative works thereof being used for and designed only to read
+      and/or write to a file system that is directly managed by an
+      Extensible Firmware Interface (EFI) implementation or by an emulator
+      of an EFI implementation.</License>
+    <Specification>FRAMEWORK_BUILD_PACKAGING_SPECIFICATION   0x00000052</Specification>
+  </SpdHeader>
+  <PackageDefinitions>
+    <ReadOnly>false</ReadOnly>
+    <RePackage>false</RePackage>
+  </PackageDefinitions>
+  <MsaFiles>
+    <Filename>EnhancedFatDxe/Fat.msa</Filename>
+  </MsaFiles>
+  <GuidDeclarations>
+    <Entry Name="Fat Package Token space Guid" GuidTypeList="TOKEN_SPACE_GUID">
+      <C_Name>gEfiFatPkgTokenSpaceGuid</C_Name>
+      <GuidValue>c8e92dba-1d92-411f-ae0a-1dbed8f13299</GuidValue>
+      <HelpText/>
+    </Entry>
+  </GuidDeclarations>
+  <PcdDeclarations>
+    <PcdEntry>
+      <C_Name>PcdUnicodeCollationSupport</C_Name>
+      <Token>0x00010001</Token>
+      <TokenSpaceGuidCName>gEfiFatPkgTokenSpaceGuid</TokenSpaceGuidCName>
+      <DatumType>BOOLEAN</DatumType>
+      <ValidUsage>FEATURE_FLAG</ValidUsage>
+      <DefaultValue>TRUE</DefaultValue>
+      <HelpText>Support Unicode Collation</HelpText>
+    </PcdEntry>
+    <PcdEntry>
+      <C_Name>PcdUnicodeCollationSupport2</C_Name>
+      <Token>0x00010002</Token>
+      <TokenSpaceGuidCName>gFatPkgTokenSpaceGuid</TokenSpaceGuidCName>
+      <DatumType>BOOLEAN</DatumType>
+      <ValidUsage>FEATURE_FLAG</ValidUsage>
+      <DefaultValue>TRUE</DefaultValue>
+      <HelpText>Support Unicode Collation 2.</HelpText>
+    </PcdEntry>
+  </PcdDeclarations>
+</PackageSurfaceArea>
