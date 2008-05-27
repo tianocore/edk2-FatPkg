@@ -668,7 +668,7 @@ FatGetNextDirEnt (
 
 Routine Description:
 
-  Set the directory’s cursor to the next and get the next directory entry.
+  Set the directory's cursor to the next and get the next directory entry.
 
 Arguments:
 
