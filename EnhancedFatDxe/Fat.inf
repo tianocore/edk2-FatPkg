@@ -107,7 +107,6 @@
   gEfiFileInfoGuid
   gEfiFileSystemInfoGuid
   gEfiFileSystemVolumeLabelInfoIdGuid
-  gEfiGlobalVariableGuid
 
 [Protocols]
   gEfiDiskIoProtocolGuid
