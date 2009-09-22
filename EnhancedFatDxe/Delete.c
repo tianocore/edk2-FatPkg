@@ -1,6 +1,6 @@
 /*++
 
-Copyright (c) 2005, Intel Corporation
+Copyright (c) 2005 - 2009, Intel Corporation
 All rights reserved. This program and the accompanying materials
 are licensed and made available under the terms and conditions of the Software
 License Agreement which accompanies this distribution.
@@ -23,7 +23,7 @@ Revision History
 EFI_STATUS
 EFIAPI
 FatDelete (
-  IN EFI_FILE  *FHand
+  IN EFI_FILE_PROTOCOL  *FHand
   )
 /*++
 

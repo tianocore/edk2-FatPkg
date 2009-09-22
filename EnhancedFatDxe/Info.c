@@ -1,6 +1,6 @@
 /*++
 
-Copyright (c) 2005 - 2007, Intel Corporation
+Copyright (c) 2005 - 2009, Intel Corporation
 All rights reserved. This program and the accompanying materials
 are licensed and made available under the terms and conditions of the Software
 License Agreement which accompanies this distribution.
@@ -36,11 +36,11 @@ FatSetVolumeInfo (
 
 EFI_STATUS
 FatSetOrGetInfo (
-  IN BOOLEAN    IsSet,
-  IN EFI_FILE   *FHand,
-  IN EFI_GUID   *Type,
-  IN OUT UINTN  *BufferSize,
-  IN OUT VOID   *Buffer
+  IN BOOLEAN              IsSet,
+  IN EFI_FILE_PROTOCOL    *FHand,
+  IN EFI_GUID             *Type,
+  IN OUT UINTN            *BufferSize,
+  IN OUT VOID             *Buffer
   );
 
 EFI_STATUS
@@ -470,11 +470,11 @@ Returns:
 
 EFI_STATUS
 FatSetOrGetInfo (
-  IN     BOOLEAN        IsSet,
-  IN     EFI_FILE       *FHand,
-  IN     EFI_GUID       *Type,
-  IN OUT UINTN          *BufferSize,
-  IN OUT VOID           *Buffer
+  IN     BOOLEAN            IsSet,
+  IN     EFI_FILE_PROTOCOL  *FHand,
+  IN     EFI_GUID           *Type,
+  IN OUT UINTN              *BufferSize,
+  IN OUT VOID               *Buffer
   )
 /*++
 
@@ -561,10 +561,10 @@ Returns:
 EFI_STATUS
 EFIAPI
 FatGetInfo (
-  IN     EFI_FILE       *FHand,
-  IN     EFI_GUID       *Type,
-  IN OUT UINTN          *BufferSize,
-     OUT VOID           *Buffer
+  IN     EFI_FILE_PROTOCOL   *FHand,
+  IN     EFI_GUID            *Type,
+  IN OUT UINTN               *BufferSize,
+     OUT VOID                *Buffer
   )
 /*++
 
@@ -592,10 +592,10 @@ Returns:
 EFI_STATUS
 EFIAPI
 FatSetInfo (
-  IN EFI_FILE  *FHand,
-  IN EFI_GUID  *Type,
-  IN UINTN     BufferSize,
-  IN VOID      *Buffer
+  IN EFI_FILE_PROTOCOL  *FHand,
+  IN EFI_GUID           *Type,
+  IN UINTN              BufferSize,
+  IN VOID               *Buffer
   )
 /*++
 

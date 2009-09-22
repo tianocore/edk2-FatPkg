@@ -1,6 +1,6 @@
 /*++
 
-Copyright (c) 2005, Intel Corporation
+Copyright (c) 2005 - 2009, Intel Corporation
 All rights reserved. This program and the accompanying materials
 are licensed and made available under the terms and conditions of the Software
 License Agreement which accompanies this distribution.
@@ -31,7 +31,7 @@ EFI_LOCK FatFsLock = EFI_INITIALIZE_LOCK_VARIABLE(TPL_CALLBACK);
 //
 // Filesystem interface functions
 //
-EFI_FILE                        FatFileInterface = {
+EFI_FILE_PROTOCOL               FatFileInterface = {
   EFI_FILE_PROTOCOL_REVISION,
   FatOpen,
   FatClose,
