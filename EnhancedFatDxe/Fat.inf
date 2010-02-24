@@ -1,10 +1,10 @@
-#/** @file
+## @file
 #  Component description file for FAT module.
 #
 #  This UEFI driver detects the FAT file system in the disk.
 #  It also produces the Simple File System protocol for the consumer to
 #  perform file and directory operations on the disk.
-#  Copyright (c) 2007, Intel Corporation
+#  Copyright (c) 2007 - 2010, Intel Corporation
 #
 #  Redistribution and use in source and binary forms, with or without
 #  modification, are permitted provided that the following conditions are
@@ -42,7 +42,7 @@
 #  of an EFI implementation.
 #
 #
-#**/
+##
 
 [Defines]
   INF_VERSION                    = 0x00010005
@@ -66,7 +66,7 @@
 #  COMPONENT_NAME2               =  gFatComponentName2
 #
 
-[Sources.common]
+[Sources]
   DirectoryCache.c
   DiskCache.c
   FileName.c

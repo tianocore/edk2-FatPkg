@@ -1,10 +1,10 @@
-#/** @file
+## @file
 #
 #  Build Binary Enhanced Fat Driver Modules
 #
 #  This Platform file is used to generate the Binary Fat Drivers
 #  for EDK II Prime release.
-#  Copyright (c) 2007, Intel Corporation
+#  Copyright (c) 2007 - 2010, Intel Corporation
 #
 #  Redistribution and use in source and binary forms, with or without
 #  modification, are permitted provided that the following conditions are
@@ -41,7 +41,7 @@
 #  Extensible Firmware Interface (EFI) implementation or by an emulator
 #  of an EFI implementation.
 #
-#**/
+##
 
 [Defines]
   PLATFORM_NAME                  = Fat
@@ -53,7 +53,7 @@
   BUILD_TARGETS                  = DEBUG|RELEASE
   SKUID_IDENTIFIER               = DEFAULT
 
-[LibraryClasses.common]
+[LibraryClasses]
   #
   # Entry Point Libraries
   #
@@ -91,5 +91,5 @@
 #
 ###################################################################################################
 
-[Components.common]
+[Components]
   FatPkg/EnhancedFatDxe/Fat.inf

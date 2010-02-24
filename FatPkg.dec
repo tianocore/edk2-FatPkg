@@ -1,9 +1,9 @@
-#/** @file
+## @file
 #
 #  FAT Package
 #
 # FAT 32 Driver
-#  Copyright (c) 2007,  Intel Corporation.
+#  Copyright (c) 2007 - 2010, Intel Corporation.
 #
 #  Redistribution and use in source and binary forms, with or without
 #    modification, are permitted provided that the following conditions are
@@ -40,7 +40,7 @@
 #    Extensible Firmware Interface (EFI) implementation or by an emulator
 #    of an EFI implementation.
 #
-#**/
+##
 
 [Defines]
   DEC_VERSION                    = 0x00010005
