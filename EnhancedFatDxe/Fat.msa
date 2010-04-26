@@ -7,7 +7,7 @@
     <Version>1.0</Version>
     <Abstract>Component description file for FAT module.</Abstract>
     <Description>This UEFI driver detects the FAT file system in the disk. It also produces the Simple File System protocol for the consumer to perform file and directory operations on the disk.</Description>
-    <Copyright>Copyright (c) 2004 - 2007, Intel Corporation</Copyright>
+    <Copyright>Copyright (c) 2004 - 2007, Intel Corporation. All rights reserved.</Copyright>
     <License>Redistribution and use in source and binary forms, with or without
       modification, are permitted provided that the following conditions are
       met:
