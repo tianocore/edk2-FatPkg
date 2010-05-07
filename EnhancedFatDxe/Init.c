@@ -47,8 +47,7 @@ Returns:
 {
   EFI_STATUS  Status;
   FAT_VOLUME  *Volume;
-  BOOLEAN     LockedByMe;
-  LockedByMe = FALSE;
+
   //
   // Allocate a volume structure
   //
@@ -56,14 +55,7 @@ Returns:
   if (Volume == NULL) {
     return EFI_OUT_OF_RESOURCES;
   }
-  //
-  // Acquire the lock.
-  // If caller has already acquired the lock, cannot lock it again.
-  //
-  Status = FatAcquireLockOrFail ();
-  if (!EFI_ERROR (Status)) {
-    LockedByMe = TRUE;
-  }
+
   //
   // Initialize the structure
   //
@@ -115,13 +107,6 @@ Returns:
   Volume->Valid = TRUE;
 
 Done:
-  //
-  // Unlock if locked by myself.
-  //
-  if (LockedByMe) {
-    FatReleaseLock ();
-  }
-
   if (EFI_ERROR (Status)) {
     FatFreeVolume (Volume);
   }
