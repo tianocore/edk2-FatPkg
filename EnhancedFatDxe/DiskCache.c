@@ -1,6 +1,6 @@
 /*++
 
-Copyright (c) 2005 - 2007, Intel Corporation. All rights reserved.<BR>
+Copyright (c) 2005 - 2012, Intel Corporation. All rights reserved.<BR>
 This program and the accompanying materials
 are licensed and made available under the terms and conditions of the Software
 License Agreement which accompanies this distribution.
@@ -525,7 +525,7 @@ Returns:
   //
   // Allocate the Fat Cache buffer
   //
-  CacheBuffer = AllocatePool (FatCacheSize + DataCacheSize);
+  CacheBuffer = AllocateZeroPool (FatCacheSize + DataCacheSize);
   if (CacheBuffer == NULL) {
     return EFI_OUT_OF_RESOURCES;
   }
