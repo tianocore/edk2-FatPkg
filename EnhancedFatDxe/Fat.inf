@@ -4,7 +4,7 @@
 #  This UEFI driver detects the FAT file system in the disk.
 #  It also produces the Simple File System protocol for the consumer to
 #  perform file and directory operations on the disk.
-#  Copyright (c) 2007 - 2010, Intel Corporation. All rights reserved.<BR>
+#  Copyright (c) 2007 - 2013, Intel Corporation. All rights reserved.<BR>
 #
 #  Redistribution and use in source and binary forms, with or without
 #  modification, are permitted provided that the following conditions are
@@ -107,6 +107,7 @@
 
 [Protocols]
   gEfiDiskIoProtocolGuid
+  gEfiDiskIo2ProtocolGuid
   gEfiBlockIoProtocolGuid
   gEfiSimpleFileSystemProtocolGuid
   gEfiUnicodeCollationProtocolGuid
