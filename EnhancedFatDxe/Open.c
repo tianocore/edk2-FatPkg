@@ -1,6 +1,6 @@
 /*++
 
-Copyright (c) 2005 - 2013, Intel Corporation. All rights reserved.<BR>
+Copyright (c) 2005 - 2014, Intel Corporation. All rights reserved.<BR>
 This program and the accompanying materials
 are licensed and made available under the terms and conditions of the Software
 License Agreement which accompanies this distribution.
@@ -120,6 +120,7 @@ Returns:
   UINT8       FileAttributes;
   BOOLEAN     WriteMode;
 
+  DirEnt = NULL;
   Volume = OFile->Volume;
   ASSERT_VOLUME_LOCKED (Volume);
   WriteMode = (BOOLEAN) (OpenMode & EFI_FILE_MODE_WRITE);
@@ -155,6 +156,7 @@ Returns:
       return Status;
     }
 
+    ASSERT (DirEnt != NULL);
     Status = FatOpenDirEnt (OFile, DirEnt);
     if (EFI_ERROR (Status)) {
       return Status;
