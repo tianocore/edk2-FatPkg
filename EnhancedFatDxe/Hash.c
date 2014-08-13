@@ -1,6 +1,6 @@
 /*++
 
-Copyright (c) 2005 - 2007, Intel Corporation. All rights reserved.<BR>
+Copyright (c) 2005 - 2014, Intel Corporation. All rights reserved.<BR>
 This program and the accompanying materials
 are licensed and made available under the terms and conditions of the Software
 License Agreement which accompanies this distribution.
@@ -43,7 +43,8 @@ Returns:
 {
   UINT32  HashValue;
   CHAR16  UpCasedLongFileName[EFI_PATH_STRING_LENGTH];
-  StrCpy (UpCasedLongFileName, LongNameString);
+  StrnCpy (UpCasedLongFileName, LongNameString, EFI_PATH_STRING_LENGTH - 1);
+  UpCasedLongFileName[EFI_PATH_STRING_LENGTH - 1] = L'\0';
   FatStrUpr (UpCasedLongFileName);
   gBS->CalculateCrc32 (UpCasedLongFileName, StrSize (UpCasedLongFileName), &HashValue);
   return (HashValue & HASH_TABLE_MASK);
