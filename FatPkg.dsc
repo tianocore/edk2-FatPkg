@@ -88,6 +88,7 @@
 
 [LibraryClasses.ARM, LibraryClasses.AARCH64]
   NULL|ArmPkg/Library/CompilerIntrinsicsLib/CompilerIntrinsicsLib.inf
+  NULL|MdePkg/Library/BaseStackCheckLib/BaseStackCheckLib.inf
 
 ###################################################################################################
 #
