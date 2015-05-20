@@ -1,7 +1,7 @@
 /** @file
   Data structures for FAT recovery PEIM
 
-Copyright (c) 2006 - 2010, Intel Corporation. All rights reserved.<BR>
+Copyright (c) 2006 - 2015, Intel Corporation. All rights reserved.<BR>
 
 This program and the accompanying materials
 are licensed and made available under the terms and conditions of the Software
@@ -16,6 +16,7 @@ License Agreement which accompanies this distribution.
 
 #include <Guid/RecoveryDevice.h>
 #include <Ppi/BlockIo.h>
+#include <Ppi/BlockIo2.h>
 #include <Ppi/DeviceRecoveryModule.h>
 
 #include <Library/DebugLib.h>
@@ -69,11 +70,13 @@ typedef struct {
   // Following fields only valid for physical device
   //
   EFI_PEI_BLOCK_DEVICE_TYPE     DevType;
+  UINT8                         InterfaceType;
   //
   // EFI_PEI_READ_BLOCKS         ReadFunc;
   //
-  EFI_PEI_RECOVERY_BLOCK_IO_PPI *BlockIo;
-  UINT8                         PhysicalDevNo;
+  EFI_PEI_RECOVERY_BLOCK_IO_PPI  *BlockIo;
+  EFI_PEI_RECOVERY_BLOCK_IO2_PPI *BlockIo2;
+  UINT8                          PhysicalDevNo;
 } PEI_FAT_BLOCK_DEVICE;
 
 //
@@ -146,7 +149,7 @@ typedef struct {
   UINTN                               Signature;
   EFI_PEI_DEVICE_RECOVERY_MODULE_PPI  DeviceRecoveryPpi;
   EFI_PEI_PPI_DESCRIPTOR              PpiDescriptor;
-  EFI_PEI_NOTIFY_DESCRIPTOR           NotifyDescriptor;
+  EFI_PEI_NOTIFY_DESCRIPTOR           NotifyDescriptor[2];
 
   UINT8                               UnicodeCaseMap[0x300];
   CHAR8                               *EngUpperMap;
